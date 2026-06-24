@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=2" />
 </head>
 <body>
   <!-- ===================== NAV ===================== -->
@@ -85,43 +85,79 @@
       </div>
     </section>
 
-    <!-- ===================== RATE TABLE + CALCULATOR ===================== -->
+    <!-- ===================== TIER CARDS (per-site rate) ===================== -->
     <section class="section section--alt" id="plans" style="padding-top: clamp(40px,5vw,64px)">
       <div class="container">
         <header class="section__head reveal">
-          <p class="eyebrow">Pricing</p>
-          <h2 class="section__title">Pay per site-study</h2>
-          <p class="section__lead">A per-site-study rate that steps down as you grow. No tiers to jump, no cliffs — and adding a site never lowers your bill.</p>
+          <p class="eyebrow">Plans</p>
+          <h2 class="section__title">A per-site-study rate that steps down as you grow</h2>
+          <p class="section__lead">Same product at every size — bigger portfolios just pay a lower rate per site-study.</p>
         </header>
 
-        <div class="rate-grid reveal">
-          <div class="rate-card">
-            <h3>Per site-study, per year</h3>
-            <table class="rate-table">
-              <thead><tr><th>Site-studies</th><th>Rate each</th></tr></thead>
-              <tbody>
-                <tr><th>1–5</th><td>$2,500</td></tr>
-                <tr><th>6–20</th><td>$1,500</td></tr>
-                <tr><th>21–50</th><td>$1,100</td></tr>
-                <tr><th>51+</th><td>Custom</td></tr>
-              </tbody>
-            </table>
-            <p class="rate-card__note">Graduated: each band's rate applies only to the site-studies in that band — so adding one always costs a little more, never less. An additional study at a site you already run is ~60%.</p>
+        <div class="ptiers reveal">
+          <!-- Starter -->
+          <div class="tier">
+            <div class="tier__name">Starter</div>
+            <div class="tier__price">$2,500<span> / site-study</span></div>
+            <div class="tier__unit">site-studies 1–5 · billed yearly</div>
+            <a href="index.html#contact" class="btn">Get a demo</a>
+            <ul class="tier__list">
+              <li>Unlimited users, trainees &amp; Part 11 signatures</li>
+              <li>Unlimited studies</li>
+              <li>Standard validation pack (IQ/OQ/PQ)</li>
+              <li>Email support</li>
+              <li>2-week implementation</li>
+            </ul>
           </div>
 
-          <div class="calc">
-            <label class="calc__label" for="ss-count">Estimate your annual cost</label>
-            <div class="calc__row">
-              <input type="range" id="ss-range" min="1" max="50" value="12" aria-label="Number of site-studies" />
-              <div class="calc__num"><input type="number" id="ss-count" min="1" value="12" /> site-studies</div>
-            </div>
-            <div class="calc__out">
-              <div class="calc__total" id="calc-total">$&mdash;<span>/yr</span></div>
-              <div class="calc__eff" id="calc-eff"></div>
-            </div>
-            <p class="calc__note">Graduated pricing — more sites always costs more, never less. Past 50, <a href="index.html#contact">talk to us</a>.</p>
+          <!-- Growth (featured) -->
+          <div class="tier tier--featured">
+            <span class="tier__badge">Most popular</span>
+            <div class="tier__name">Growth</div>
+            <div class="tier__price">$1,500<span> / site-study</span></div>
+            <div class="tier__unit">site-studies 6–20 · billed yearly</div>
+            <a href="index.html#contact" class="btn">Get a demo</a>
+            <ul class="tier__list">
+              <li>Everything in Starter</li>
+              <li>Standard validation pack (IQ/OQ/PQ)</li>
+              <li>Priority support</li>
+              <li>2-week implementation</li>
+            </ul>
+          </div>
+
+          <!-- Scale -->
+          <div class="tier">
+            <div class="tier__name">Scale</div>
+            <div class="tier__price">$1,100<span> / site-study</span></div>
+            <div class="tier__unit">site-studies 21–50 · billed yearly</div>
+            <a href="index.html#contact" class="btn">Get a demo</a>
+            <ul class="tier__list">
+              <li>Everything in Growth</li>
+              <li>Full validation pack (IQ/OQ/PQ)</li>
+              <li>Dedicated customer success manager</li>
+              <li>3–4-week implementation</li>
+            </ul>
+          </div>
+
+          <!-- Enterprise -->
+          <div class="tier">
+            <div class="tier__name">Enterprise</div>
+            <div class="tier__price">Custom</div>
+            <div class="tier__unit">51+ site-studies · volume pricing</div>
+            <a href="index.html#contact" class="btn btn--ghost">Talk to sales</a>
+            <ul class="tier__list">
+              <li>Everything in Scale</li>
+              <li>Full validation pack (IQ/OQ/PQ)</li>
+              <li>Dedicated customer success manager</li>
+              <li>Custom implementation</li>
+            </ul>
           </div>
         </div>
+
+        <p class="section__lead reveal" style="text-align:center; max-width:760px; margin:2rem auto 0; font-size:1rem">
+          <strong>Rates are graduated.</strong> Each band applies only to the site-studies in it — your first 5 are
+          $2,500 each, the next 15 are $1,500 each, and so on. Adding a site always costs more, never less.
+        </p>
       </div>
     </section>
 
@@ -148,36 +184,8 @@
       </div>
     </section>
 
-    <!-- ===================== EVERY PLAN INCLUDES ===================== -->
-    <section class="section section--alt">
-      <div class="container">
-        <header class="section__head reveal">
-          <p class="eyebrow">Included on every plan</p>
-          <h2 class="section__title">Same product, whatever your size</h2>
-        </header>
-        <div class="cards reveal">
-          <article class="card">
-            <div class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
-            <h3>Unlimited people</h3>
-            <p>Users, trainees, and 21 CFR Part 11 signatures — no seat limits, ever.</p>
-          </article>
-          <article class="card">
-            <div class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
-            <h3>Both products</h3>
-            <p>Training management and the Trial Master File, in one platform.</p>
-          </article>
-          <article class="card">
-            <div class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h8l4 4v16H6Z"/><path d="M14 2v4h4"/><path d="m9 14 2 2 4-4"/></svg></div>
-            <h3>Validation &amp; support</h3>
-            <p>Standard IQ/OQ/PQ pack and onboarding, live in about two weeks.</p>
-          </article>
-        </div>
-        <p class="section__lead reveal" style="text-align:center; margin-top:2rem">Over 50 site-studies? <strong>Enterprise</strong> adds a full validation pack and a dedicated CSM — <a class="tlink" href="index.html#contact">talk to sales →</a></p>
-      </div>
-    </section>
-
     <!-- ===================== BILLING MODEL ===================== -->
-    <section class="section">
+    <section class="section section--alt">
       <div class="container">
         <header class="section__head reveal">
           <p class="eyebrow">How billing works</p>
@@ -208,7 +216,7 @@
     </section>
 
     <!-- ===================== WORKED EXAMPLES ===================== -->
-    <section class="section section--alt">
+    <section class="section">
       <div class="container">
         <header class="section__head reveal">
           <p class="eyebrow">A few examples</p>
@@ -235,7 +243,7 @@
     </section>
 
     <!-- ===================== FAQ ===================== -->
-    <section class="section">
+    <section class="section section--alt">
       <div class="container">
         <header class="section__head reveal">
           <p class="eyebrow">Pricing FAQ</p>
@@ -248,9 +256,10 @@
               billed per site-study.</p>
           </div>
           <div class="faq__item">
-            <h4>Does the per-site rate drop as I grow?</h4>
-            <p>Yes. The rate steps down by volume band, and it's graduated — each band's rate applies
-              only to the site-studies in that band.</p>
+            <h4>How does the per-site rate drop as I grow?</h4>
+            <p>It's graduated by band — your first 5 site-studies are $2,500 each, the next 15 are
+              $1,500 each, and 21–50 are $1,100 each. Each band's rate applies only to the site-studies
+              in it.</p>
           </div>
           <div class="faq__item">
             <h4>Can adding a site-study ever lower my bill?</h4>
