@@ -44,6 +44,40 @@
     });
   }
 
+  /* ---- Pricing calculator (graduated per-site-study) ---- */
+  var calcNum = document.getElementById('ss-count');
+  var calcRange = document.getElementById('ss-range');
+  var calcTotal = document.getElementById('calc-total');
+  var calcEff = document.getElementById('calc-eff');
+  if (calcNum && calcTotal) {
+    // [upTo, marginal rate per site-study]
+    var BANDS = [[5, 2500], [20, 1500], [50, 1100]];
+    var MAXB = 50;
+    function ssCost(n) {
+      var total = 0, prev = 0;
+      for (var i = 0; i < BANDS.length; i++) {
+        var cap = BANDS[i][0], rate = BANDS[i][1];
+        if (n > prev) { total += (Math.min(n, cap) - prev) * rate; prev = cap; }
+      }
+      return total;
+    }
+    function money(x) { return '$' + x.toLocaleString('en-US'); }
+    function calcUpdate(n) {
+      n = Math.max(1, Math.floor(n || 1));
+      if (n > MAXB) {
+        calcTotal.innerHTML = 'Custom';
+        if (calcEff) calcEff.textContent = '50+ site-studies — volume pricing';
+        return;
+      }
+      var c = ssCost(n);
+      calcTotal.innerHTML = money(c) + '<span>/yr</span>';
+      if (calcEff) calcEff.textContent = '≈ ' + money(Math.round(c / n)) + ' / site-study';
+    }
+    if (calcRange) calcRange.addEventListener('input', function () { calcNum.value = calcRange.value; calcUpdate(+calcRange.value); });
+    calcNum.addEventListener('input', function () { var v = +calcNum.value; if (calcRange && v >= 1 && v <= MAXB) calcRange.value = v; calcUpdate(v); });
+    calcUpdate(+calcNum.value);
+  }
+
   /* ---- Reveal on scroll + count-up stats ---- */
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var reveals = document.querySelectorAll('.reveal');

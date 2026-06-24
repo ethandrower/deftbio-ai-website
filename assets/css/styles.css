@@ -647,3 +647,32 @@ img, svg { max-width: 100%; display: block; }
 
 @media (max-width: 900px) { .post-list { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .post-list { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   PRICING — per-site-study rate table + calculator
+   ========================================================= */
+.rate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: center; max-width: 980px; margin: 0 auto; }
+.rate-card { background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg); padding: 1.75rem; }
+.rate-card h3 { font-size: 1.05rem; color: var(--ink); margin-bottom: 1rem; }
+.rate-table { width: 100%; border-collapse: collapse; }
+.rate-table th, .rate-table td { padding: .8rem .2rem; border-bottom: 1px solid var(--border); font-size: 1rem; text-align: left; }
+.rate-table tbody tr:last-child th, .rate-table tbody tr:last-child td { border-bottom: 0; }
+.rate-table thead th { font-size: .7rem; text-transform: uppercase; letter-spacing: .05em; color: var(--text-muted); font-weight: 700; }
+.rate-table tbody th { font-weight: 600; color: var(--ink); }
+.rate-table tbody td { color: var(--primary-600); font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }
+.rate-card__note { margin-top: 1rem; font-size: .82rem; color: var(--text-muted); }
+
+.calc { background: var(--primary-900); color: #fff; border-radius: var(--r-lg); padding: clamp(1.5rem, 3vw, 2.25rem); }
+.calc__label { font-weight: 600; font-size: .95rem; display: block; margin-bottom: 1rem; }
+.calc__row { display: flex; align-items: center; gap: 1rem; }
+.calc__row input[type="range"] { flex: 1; accent-color: var(--accent-400); }
+.calc__num { display: flex; align-items: center; gap: .5rem; font-size: .85rem; color: rgba(255,255,255,.7); }
+.calc__num input { width: 76px; padding: .5rem; border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.08); color: #fff; border-radius: var(--r-sm); font: inherit; text-align: center; font-variant-numeric: tabular-nums; }
+.calc__out { margin-top: 1.6rem; padding-top: 1.4rem; border-top: 1px solid rgba(255,255,255,.15); }
+.calc__total { font-size: 2.2rem; font-weight: 700; letter-spacing: -.02em; font-variant-numeric: tabular-nums; line-height: 1; }
+.calc__total span { font-size: .95rem; font-weight: 500; color: rgba(255,255,255,.65); letter-spacing: 0; }
+.calc__eff { margin-top: .5rem; font-size: .9rem; color: var(--accent-400); font-weight: 600; }
+.calc__note { margin-top: 1.1rem; font-size: .78rem; color: rgba(255,255,255,.6); }
+.calc__note a { color: rgba(255,255,255,.85); text-decoration: underline; }
+
+@media (max-width: 860px) { .rate-grid { grid-template-columns: 1fr; } }
