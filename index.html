@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Deft — Lean clinical operations for biotech</title>
+  <meta name="description" content="Training management and a Trial Master File built for biotech startups and lean clinical teams — compliant on day one, without the enterprise rollout." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Deft — Lean clinical operations for biotech" />
+  <meta property="og:description" content="Compliant clinical training and a Trial Master File for lean teams. Live in a day, no enterprise rollout." />
+  <meta property="og:image" content="assets/og-image.png" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="#top">
+        <svg class="nav__logo" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#1E5BCB"/>
+          <path d="M9 9h6.5a7 7 0 0 1 0 14H9V9Z" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/>
+          <circle cx="22.5" cy="16" r="1.6" fill="#36C5C9"/>
+        </svg>
+        <span>Deft</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#platform">Platform</a>
+        <div class="nav__item">
+          <a href="#solutions">Solutions</a>
+          <div class="nav__menu">
+            <a href="#training">Clinical Training Management<small>Assign, track & e-sign training</small></a>
+            <a href="#tmf">Trial Master File<small>Inspection-ready, day one</small></a>
+          </div>
+        </div>
+        <div class="nav__item">
+          <a href="#resources">Resources</a>
+          <div class="nav__menu">
+            <a href="#resources">Blog<small>Guides & compliance notes</small></a>
+          </div>
+        </div>
+        <a href="#company">Company</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+
+      <div class="nav__right">
+        <a href="#" class="nav__login">Log in</a>
+        <a href="#contact" class="btn btn--sm">Get a demo</a>
+      </div>
+
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="platform">
+      <div class="container hero__inner">
+        <div class="hero__copy reveal">
+          <p class="eyebrow">Clinical training &amp; TMF for biotech</p>
+          <h1 class="hero__title">Lean clinical operations for biotech</h1>
+          <p class="hero__sub">
+            Training management and a Trial Master File built for startups and lean clinical
+            teams — compliant on day one, without the enterprise rollout.
+          </p>
+          <div class="hero__cta">
+            <a href="#contact" class="btn btn--lg">Get a demo</a>
+            <a href="#explorer" class="btn btn--ghost btn--lg">See the platform</a>
+          </div>
+          <p class="hero__note">Live in a day · 21 CFR Part 11 e-signatures built in</p>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="mockup">
+            <div class="mockup__bar"><i></i><i></i><i></i><span>Deft — Training</span></div>
+            <div class="mockup__body">
+              <div class="ui-head">
+                <h5>Training matrix</h5>
+                <span class="ui-chip">Site 01 — Denver</span>
+                <span class="ui-chip ui-chip--ok ui-spacer">86% trained</span>
+              </div>
+              <div class="ui-table">
+                <div class="ui-row ui-row--head"><span>Team member</span><span>Curriculum</span><span>Due</span><span>Status</span></div>
+                <div class="ui-row ui-row--data">
+                  <span class="ui-cell-name"><span class="ui-ava ui-ava--b">AM</span><span><b>A. Mensah</b><small>Clinical Research Coord.</small></span></span>
+                  <span class="ui-cell">GCP Refresher</span>
+                  <span class="ui-due">Apr 2</span>
+                  <span><span class="pill pill--done">Completed</span></span>
+                </div>
+                <div class="ui-row ui-row--data">
+                  <span class="ui-cell-name"><span class="ui-ava ui-ava--t">RK</span><span><b>R. Kapoor</b><small>Site Investigator</small></span></span>
+                  <span class="ui-cell">Site Activation</span>
+                  <span class="ui-due">Jun 30</span>
+                  <span><span class="pill pill--pend">Pending</span></span>
+                </div>
+                <div class="ui-row ui-row--data">
+                  <span class="ui-cell-name"><span class="ui-ava ui-ava--v">JL</span><span><b>J. Liu</b><small>Study Nurse</small></span></span>
+                  <span class="ui-cell">Protocol NS-204</span>
+                  <span class="ui-due is-late">May 12</span>
+                  <span><span class="pill pill--late">Overdue</span></span>
+                </div>
+                <div class="ui-row ui-row--data">
+                  <span class="ui-cell-name"><span class="ui-ava ui-ava--g">SD</span><span><b>S. Daoud</b><small>Pharmacy Tech</small></span></span>
+                  <span class="ui-cell">IATA Shipping SOP</span>
+                  <span class="ui-due">Mar 19</span>
+                  <span><span class="pill pill--done">Completed</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STAT STRIP ===================== -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="stats reveal">
+          <div class="stat">
+            <div class="stat__num tnum" data-count="1" data-suffix=" day">1 day</div>
+            <div class="stat__label">to onboard a site</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num is-accent">21 CFR<br>Part 11</div>
+            <div class="stat__label">e-signatures &amp; audit trail</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num tnum" data-count="2">2</div>
+            <div class="stat__label">products, one platform</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num tnum" data-count="0">0</div>
+            <div class="stat__label">implementation projects</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROBLEM → OUTCOME ===================== -->
+    <section class="section" id="solutions">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">The problem</p>
+          <h2 class="section__title">Big-pharma tooling doesn't fit a startup trial</h2>
+          <p class="section__lead">
+            Startups still have to run compliant trials — and training and the Trial Master File
+            are where site compliance lives. The tools built for that were built for big pharma:
+            heavy to roll out, priced for an enterprise, and far more than a lean team needs.
+          </p>
+        </header>
+
+        <div class="compare reveal">
+          <div class="compare__col compare__col--old">
+            <p class="compare__tag">The old way</p>
+            <ul class="compare__list">
+              <li>Training tracked across spreadsheets and email; audit prep is a fire drill.</li>
+              <li>A Trial Master File means a six-figure platform and a months-long integration.</li>
+              <li>Tools built for big pharma, priced for big pharma.</li>
+            </ul>
+          </div>
+          <div class="compare__col compare__col--new">
+            <p class="compare__tag">With Deft</p>
+            <ul class="compare__list">
+              <li>Assign, track, and e-sign training by role and site in one place.</li>
+              <li>A TMF that's ready on day one and scales with the trial.</li>
+              <li>Flexible and compliant, priced for the team you actually have.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== VALUE PILLARS ===================== -->
+    <section class="section section--alt">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Why Deft</p>
+          <h2 class="section__title">Powerful where it counts, light everywhere else</h2>
+        </header>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg>
+            </div>
+            <h3>Built for biotech</h3>
+            <p>Training, TMF, and clinical-ops workflows shaped for startups and lean teams — not retrofitted from enterprise software.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>
+            </div>
+            <h3>Lean</h3>
+            <p>Onboard and start in a single day. No implementation project, no integration blockers.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-7"/><path d="M17 8h4v4"/></svg>
+            </div>
+            <h3>Scalable</h3>
+            <p>Pricing and structure that match your team — from a single site to a global, multi-site investigation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRODUCT EXPLORER (tabs) ===================== -->
+    <section class="section" id="explorer">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">The platform</p>
+          <h2 class="section__title">Everything a lean clinical team runs on</h2>
+        </header>
+
+        <div class="tabs reveal" role="tablist">
+          <button class="tab is-active" data-tab="matrix" role="tab">Training matrix</button>
+          <button class="tab" data-tab="sign" role="tab">E-signatures</button>
+          <button class="tab" data-tab="tmf" role="tab">Trial Master File</button>
+          <button class="tab" data-tab="docs" role="tab">SOP &amp; document control</button>
+          <button class="tab" data-tab="audit" role="tab">Audit &amp; reporting</button>
+        </div>
+
+        <div class="explorer__stage reveal">
+          <!-- MATRIX -->
+          <div class="panel is-active" data-panel="matrix">
+            <div class="panel__copy">
+              <h3>Training matrix</h3>
+              <p>Map every curriculum to roles and sites. Deft assigns the right training to the right people and tracks due dates automatically.</p>
+            </div>
+          </div>
+          <!-- SIGN -->
+          <div class="panel" data-panel="sign">
+            <div class="panel__copy">
+              <h3>E-signatures</h3>
+              <p>21 CFR Part 11 signatures with email verification and a signature PIN. Every completion is signed, timestamped, and logged.</p>
+            </div>
+          </div>
+          <!-- TMF -->
+          <div class="panel" data-panel="tmf">
+            <div class="panel__copy">
+              <h3>Trial Master File</h3>
+              <p>A flexible TMF that mirrors your study structure, versions every document, and stays inspection-ready.</p>
+            </div>
+          </div>
+          <!-- DOCS -->
+          <div class="panel" data-panel="docs">
+            <div class="panel__copy">
+              <h3>SOP &amp; document control</h3>
+              <p>Draft, review, approve, and publish SOPs with a full version history and approval trail.</p>
+            </div>
+          </div>
+          <!-- AUDIT -->
+          <div class="panel" data-panel="audit">
+            <div class="panel__copy">
+              <h3>Audit &amp; reporting</h3>
+              <p>See training status across every site at a glance, and export a clean record the moment an inspector asks.</p>
+            </div>
+          </div>
+
+          <!-- shared visual stage; swapped by JS -->
+          <div class="explorer__media">
+            <!-- matrix mockup -->
+            <div class="mockup vis vis--matrix">
+              <div class="mockup__bar"><i></i><i></i><i></i><span>Deft — Training</span></div>
+              <div class="mockup__body">
+                <div class="ui-head">
+                  <h5>Training matrix</h5>
+                  <span class="ui-chip">Site 01 — Denver</span>
+                  <span class="ui-chip ui-chip--ok ui-spacer">86% trained</span>
+                </div>
+                <div class="ui-table">
+                  <div class="ui-row ui-row--head"><span>Team member</span><span>Curriculum</span><span>Due</span><span>Status</span></div>
+                  <div class="ui-row ui-row--data">
+                    <span class="ui-cell-name"><span class="ui-ava ui-ava--b">AM</span><span><b>A. Mensah</b><small>Clinical Research Coord.</small></span></span>
+                    <span class="ui-cell">GCP Refresher</span>
+                    <span class="ui-due">Apr 2</span>
+                    <span><span class="pill pill--done">Completed</span></span>
+                  </div>
+                  <div class="ui-row ui-row--data">
+                    <span class="ui-cell-name"><span class="ui-ava ui-ava--t">RK</span><span><b>R. Kapoor</b><small>Site Investigator</small></span></span>
+                    <span class="ui-cell">Site Activation</span>
+                    <span class="ui-due">Jun 30</span>
+                    <span><span class="pill pill--pend">Pending</span></span>
+                  </div>
+                  <div class="ui-row ui-row--data">
+                    <span class="ui-cell-name"><span class="ui-ava ui-ava--v">JL</span><span><b>J. Liu</b><small>Study Nurse</small></span></span>
+                    <span class="ui-cell">Protocol NS-204</span>
+                    <span class="ui-due is-late">May 12</span>
+                    <span><span class="pill pill--late">Overdue</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- signature mockup -->
+            <div class="mockup vis vis--sign" hidden>
+              <div class="mockup__bar"><i></i><i></i><i></i><span>Deft — Sign to complete</span></div>
+              <div class="mockup__body">
+                <div class="ui-sign">
+                  <div class="ui-sign__head">
+                    <span class="ui-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
+                    <span><h5>Confirm your e-signature</h5><small>GCP Refresher · Protocol NS-204 v3.1</small></span>
+                  </div>
+                  <div class="ui-field">
+                    <label>Meaning of signature</label>
+                    <div class="ui-select">I completed and understood this training</div>
+                  </div>
+                  <div class="ui-field">
+                    <label>Signature PIN</label>
+                    <div class="ui-pin"><i class="filled">•</i><i class="filled">•</i><i class="filled">•</i><i>·</i></div>
+                  </div>
+                  <div class="ui-signed">
+                    <span class="ui-ava ui-ava--b">AM</span>
+                    <span><b>Amara Mensah</b><small>amara.mensah@deft.com · Jun 24, 2026 14:32 UTC</small></span>
+                  </div>
+                  <p class="ui-stamp">Email-verified + PIN signed · 21 CFR Part 11 audit trail</p>
+                </div>
+              </div>
+            </div>
+            <!-- tmf mockup -->
+            <div class="mockup vis vis--tmf" hidden>
+              <div class="mockup__bar"><i></i><i></i><i></i><span>Deft — Trial Master File</span></div>
+              <div class="mockup__body">
+                <div class="ui-head">
+                  <h5>NS-204 — Phase II AF</h5>
+                  <span class="ui-chip ui-chip--soft ui-spacer">Inspection-ready</span>
+                </div>
+                <div class="ui-tree">
+                  <div class="ui-tree__row sel">
+                    <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
+                    01 — Trial Management <span class="ui-ver">24 docs</span>
+                  </div>
+                  <div class="ui-tree__row lvl1">
+                    <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h8l4 4v16H6Z"/><path d="M14 2v4h4"/></svg>
+                    Protocol &amp; amendments <span class="ui-ver ui-ver--ok">v3.1 final</span>
+                  </div>
+                  <div class="ui-tree__row lvl1">
+                    <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h8l4 4v16H6Z"/><path d="M14 2v4h4"/></svg>
+                    Investigator&rsquo;s Brochure <span class="ui-ver ui-ver--ok">v5</span>
+                  </div>
+                  <div class="ui-tree__row">
+                    <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
+                    04 — Site 01, Denver <span class="ui-ver">12 docs</span>
+                  </div>
+                  <div class="ui-tree__row lvl1">
+                    <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h8l4 4v16H6Z"/><path d="M14 2v4h4"/></svg>
+                    Training records <span class="ui-ver ui-ver--ok">all signed</span>
+                  </div>
+                  <div class="ui-tree__row lvl1">
+                    <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h8l4 4v16H6Z"/><path d="M14 2v4h4"/></svg>
+                    Delegation log <span class="ui-ver ui-ver--warn">awaiting PI</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- docs mockup -->
+            <div class="mockup vis vis--docs" hidden>
+              <div class="mockup__bar"><i></i><i></i><i></i><span>Deft — SOP control</span></div>
+              <div class="mockup__body">
+                <div class="ui-head">
+                  <h5>SOP-014 — Sample handling</h5>
+                  <span class="ui-chip ui-chip--ok ui-spacer">Effective</span>
+                </div>
+                <div class="ui-steps">
+                  <div class="ui-step done"><span class="dot">✓</span>Draft</div>
+                  <div class="ui-step done"><span class="dot">✓</span>In review</div>
+                  <div class="ui-step done"><span class="dot">✓</span>Approved</div>
+                  <div class="ui-step cur"><span class="dot">4</span>Effective</div>
+                </div>
+                <div class="ui-meta">
+                  <div class="ui-meta__row">Version <b>v4.0</b><span class="ui-spacer"></span>Effective <b>Jun 1, 2026</b></div>
+                  <div class="ui-meta__row">Approved by <b>Quality Lead</b><span class="ui-spacer"></span><span class="ui-ver ui-ver--ok">e-signed</span></div>
+                  <div class="ui-meta__row">Linked curriculum <b>IATA Shipping</b><span class="ui-spacer"></span><span class="ui-ver">auto-retrain</span></div>
+                </div>
+              </div>
+            </div>
+            <!-- audit mockup -->
+            <div class="mockup vis vis--audit" hidden>
+              <div class="mockup__bar"><i></i><i></i><i></i><span>Deft — Compliance dashboard</span></div>
+              <div class="mockup__body">
+                <div class="ui-head">
+                  <h5>Training compliance</h5>
+                  <span class="ui-chip ui-chip--soft ui-spacer">All sites</span>
+                </div>
+                <div class="ui-tiles">
+                  <div class="ui-tile"><b>148</b><span>People tracked</span></div>
+                  <div class="ui-tile"><b>23</b><span>Curricula</span></div>
+                  <div class="ui-tile"><b>18</b><span>Overdue</span></div>
+                </div>
+                <div class="ui-dash">
+                  <div class="ui-donut" aria-hidden="true"></div>
+                  <div class="ui-legend">
+                    <span><i style="background:var(--success)"></i> Completed · 72%</span>
+                    <span><i style="background:var(--primary-500)"></i> Pending · 16%</span>
+                    <span><i style="background:var(--error)"></i> Overdue · 12%</span>
+                  </div>
+                </div>
+                <div class="ui-bars">
+                  <div class="ui-bar"><span>Site 01</span><div class="track"><div class="fill" style="width:86%"></div></div><b>86%</b></div>
+                  <div class="ui-bar"><span>Site 02</span><div class="track"><div class="fill is-mid" style="width:64%"></div></div><b>64%</b></div>
+                  <div class="ui-bar"><span>Site 03</span><div class="track"><div class="fill is-low" style="width:41%"></div></div><b>41%</b></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DEEP-DIVE FEATURES ===================== -->
+    <section class="section section--alt">
+      <div class="container">
+        <!-- Feature A -->
+        <div class="feature reveal" id="training">
+          <div class="feature__body">
+            <p class="eyebrow">Training management</p>
+            <h3>Every site trained, every record signed</h3>
+            <p>Build a training matrix once and Deft keeps it current — assigning curricula by role and site, tracking due dates, and flagging anything overdue. Staff complete training and sign off with a compliant e-signature, so the audit trail builds itself.</p>
+            <ul class="feature__list">
+              <li>Role- and site-based assignment, synced automatically as your team changes</li>
+              <li>21 CFR Part 11 e-signatures — email verification plus a signature PIN</li>
+              <li>Live status across every site, exportable for inspection</li>
+            </ul>
+            <a href="#contact" class="tlink">See training management →</a>
+          </div>
+          <div class="feature__media">
+            <div class="mockup">
+              <div class="mockup__bar"><i></i><i></i><i></i><span>Deft — Assignments</span></div>
+              <div class="mockup__body">
+                <div class="ui-head">
+                  <h5>Assignments</h5>
+                  <span class="ui-chip">By role &amp; site</span>
+                  <span class="ui-chip ui-chip--soft ui-spacer">Auto-synced</span>
+                </div>
+                <div class="ui-table">
+                  <div class="ui-row ui-row--head"><span>Team member</span><span>Curriculum</span><span>Due</span><span>Status</span></div>
+                  <div class="ui-row ui-row--data">
+                    <span class="ui-cell-name"><span class="ui-ava ui-ava--t">RK</span><span><b>R. Kapoor</b><small>Site Investigator</small></span></span>
+                    <span class="ui-cell">Site Activation</span>
+                    <span class="ui-due">Jun 30</span>
+                    <span><span class="pill pill--pend">Pending</span></span>
+                  </div>
+                  <div class="ui-row ui-row--data">
+                    <span class="ui-cell-name"><span class="ui-ava ui-ava--b">AM</span><span><b>A. Mensah</b><small>Clinical Research Coord.</small></span></span>
+                    <span class="ui-cell">GCP Refresher</span>
+                    <span class="ui-due">Apr 2</span>
+                    <span><span class="pill pill--done">Completed</span></span>
+                  </div>
+                  <div class="ui-row ui-row--data">
+                    <span class="ui-cell-name"><span class="ui-ava ui-ava--v">JL</span><span><b>J. Liu</b><small>Study Nurse</small></span></span>
+                    <span class="ui-cell">Protocol NS-204</span>
+                    <span class="ui-due is-late">May 12</span>
+                    <span><span class="pill pill--late">Overdue</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature B (reversed) -->
+        <div class="feature feature--rev reveal" id="tmf">
+          <div class="feature__body">
+            <p class="eyebrow">Trial Master File</p>
+            <h3>A TMF that's ready on day one</h3>
+            <p>Set up a Trial Master File that mirrors your study, sponsor, and site structure in minutes — no integration, no consultants. Every document is versioned and access-controlled, so the file stays inspection-ready as the trial grows.</p>
+            <ul class="feature__list">
+              <li>Structure that maps to sponsor → study → site out of the box</li>
+              <li>Full version history and audit trail on every document</li>
+              <li>Scales from a single site to a multi-site, global investigation</li>
+            </ul>
+            <a href="#contact" class="tlink">See the TMF →</a>
+          </div>
+          <div class="feature__media">
+            <div class="mockup">
+              <div class="mockup__bar"><i></i><i></i><i></i><span>Deft — Trial Master File</span></div>
+              <div class="mockup__body">
+                <div class="ui-head">
+                  <h5>NS-204 — Phase II AF</h5>
+                  <span class="ui-chip ui-chip--soft ui-spacer">Inspection-ready</span>
+                </div>
+                <div class="ui-tree">
+                  <div class="ui-tree__row sel">
+                    <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
+                    Sponsor — Northstar Bio <span class="ui-ver">3 studies</span>
+                  </div>
+                  <div class="ui-tree__row lvl1">
+                    <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
+                    Study NS-204 <span class="ui-ver">2 sites</span>
+                  </div>
+                  <div class="ui-tree__row lvl2">
+                    <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h8l4 4v16H6Z"/><path d="M14 2v4h4"/></svg>
+                    Protocol &amp; amendments <span class="ui-ver ui-ver--ok">v3.1</span>
+                  </div>
+                  <div class="ui-tree__row lvl2">
+                    <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
+                    Site 01 — Denver <span class="ui-ver">12 docs</span>
+                  </div>
+                  <div class="ui-tree__row lvl2">
+                    <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
+                    Site 02 — Austin <span class="ui-ver">9 docs</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature C -->
+        <div class="feature reveal">
+          <div class="feature__body">
+            <p class="eyebrow">Security &amp; compliance</p>
+            <h3>Compliance built in, not bolted on</h3>
+            <p>Passwordless login, 21 CFR Part 11 signatures, role-based access, and a complete audit trail come standard. Your data is encrypted and access-controlled, so "is this validated?" has a one-word answer.</p>
+            <ul class="feature__list">
+              <li>Passwordless email login — no shared passwords to manage</li>
+              <li>Role-based access across sponsors, studies, and sites</li>
+              <li>Immutable audit trail on every signature and document change</li>
+            </ul>
+          </div>
+          <div class="feature__media">
+            <div class="mockup">
+              <div class="mockup__bar"><i></i><i></i><i></i><span>Deft — Compliance dashboard</span></div>
+              <div class="mockup__body">
+                <div class="ui-head">
+                  <h5>Training compliance</h5>
+                  <span class="ui-chip ui-chip--soft ui-spacer">All sites</span>
+                </div>
+                <div class="ui-tiles">
+                  <div class="ui-tile"><b>148</b><span>People tracked</span></div>
+                  <div class="ui-tile"><b>23</b><span>Curricula</span></div>
+                  <div class="ui-tile"><b>18</b><span>Overdue</span></div>
+                </div>
+                <div class="ui-dash">
+                  <div class="ui-donut" aria-hidden="true"></div>
+                  <div class="ui-legend">
+                    <span><i style="background:var(--success)"></i> Completed · 72%</span>
+                    <span><i style="background:var(--primary-500)"></i> Pending · 16%</span>
+                    <span><i style="background:var(--error)"></i> Overdue · 12%</span>
+                  </div>
+                </div>
+                <div class="ui-bars">
+                  <div class="ui-bar"><span>Site 01</span><div class="track"><div class="fill" style="width:86%"></div></div><b>86%</b></div>
+                  <div class="ui-bar"><span>Site 02</span><div class="track"><div class="fill is-mid" style="width:64%"></div></div><b>64%</b></div>
+                  <div class="ui-bar"><span>Site 03</span><div class="track"><div class="fill is-low" style="width:41%"></div></div><b>41%</b></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COMPLIANCE BAND ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="band reveal">
+          <h2>Built for regulated trials</h2>
+          <p>21 CFR Part 11 e-signatures, audit trails, and access controls are standard — so your trial stays inspection-ready from day one.</p>
+          <div class="badges">
+            <span class="badge">21 CFR Part 11</span>
+            <span class="badge">HIPAA</span>
+            <span class="badge">SOC 2 Type I</span>
+          </div>
+          <a href="#contact" class="band__link">Security &amp; trust →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FINAL CTA ===================== -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="cta reveal">
+          <h2>Compliant clinical ops, without the enterprise lift</h2>
+          <p>See how Deft runs training and your Trial Master File in one place — live in a day.</p>
+          <div class="cta__btns">
+            <a href="#contact" class="btn btn--lg btn--onDark">Get a demo</a>
+            <a href="#explorer" class="btn btn--lg btn--ghostDark">See the platform</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section section--alt" id="contact">
+      <div class="container contact">
+        <header class="section__head reveal">
+          <p class="eyebrow">Get a demo</p>
+          <h2 class="section__title">See Deft on your trial</h2>
+          <p class="section__lead">Tell us about your study and team. We'll get back within one business day.</p>
+        </header>
+
+        <!--
+          Web3Forms — pure static, no server needed.
+          1. Go to https://web3forms.com, enter your email, copy your Access Key.
+          2. Paste it into the access_key value below.
+          The access key is safe to expose publicly; it only routes mail to your inbox.
+        -->
+        <form class="form reveal" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <input type="hidden" name="access_key" value="900c115a-9923-4bea-a5e2-2f6e7b33dcae" />
+          <input type="hidden" name="subject" value="New demo request from deft.com" />
+          <input type="hidden" name="from_name" value="Deft Website" />
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <div class="form__row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+              <span class="field__error" data-for="name"></span>
+            </div>
+            <div class="field">
+              <label for="email">Work email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+              <span class="field__error" data-for="email"></span>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" autocomplete="organization" />
+            </div>
+            <div class="field">
+              <label for="role">Role <span class="field__opt">(optional)</span></label>
+              <input id="role" name="role" type="text" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">What are you trying to solve?</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span class="field__error" data-for="message"></span>
+          </div>
+
+          <button type="submit" class="btn btn--lg form__submit">
+            <span class="form__submit-label">Get a demo</span>
+            <span class="form__spinner" aria-hidden="true"></span>
+          </button>
+
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="company">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="nav__brand" href="#top">
+            <svg class="nav__logo" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="#1E5BCB"/>
+              <path d="M9 9h6.5a7 7 0 0 1 0 14H9V9Z" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/>
+              <circle cx="22.5" cy="16" r="1.6" fill="#36C5C9"/>
+            </svg>
+            <span>Deft</span>
+          </a>
+          <p>Lean clinical operations for biotech — training management and a Trial Master File, compliant from day one.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Product</h4>
+          <a href="#platform">Platform</a>
+          <a href="#training">Clinical Training Management</a>
+          <a href="#tmf">Trial Master File</a>
+          <a href="#pricing">Pricing</a>
+        </div>
+        <div class="footer__col">
+          <h4>Solutions</h4>
+          <a href="#solutions">For biotech startups</a>
+          <a href="#solutions">For clinical sites</a>
+          <a href="#solutions">For quality &amp; regulatory</a>
+        </div>
+        <div class="footer__col">
+          <h4>Resources</h4>
+          <a href="#resources">Blog</a>
+          <a href="#resources">Guides</a>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <a href="#company">About</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Security</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year"></span> Deft. All rights reserved. · <a href="#contact">Privacy</a> · <a href="#contact">Terms</a></span>
+        <div class="badges">
+          <span class="badge">21 CFR Part 11</span>
+          <span class="badge">HIPAA</span>
+          <span class="badge">SOC 2 Type I</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
