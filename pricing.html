@@ -18,6 +18,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
   <link rel="stylesheet" href="assets/css/styles.css?v=2" />
+  <style>
+    .scroll-cue { display: flex; justify-content: center; margin-top: 2.75rem; }
+    .scroll-cue a { color: var(--text-muted); animation: cue-bounce 1.8s ease-in-out infinite; }
+    .scroll-cue a:hover { color: var(--primary-600); }
+    .scroll-cue svg { width: 30px; height: 30px; }
+    @keyframes cue-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(7px); } }
+  </style>
 </head>
 <body>
   <!-- ===================== NAV ===================== -->
@@ -68,9 +75,8 @@
       <div class="container">
         <p class="eyebrow reveal">Pricing</p>
         <h1 class="reveal">Priced for your protocols, not your headcount</h1>
-        <p class="reveal">Unlimited users, trainees, and 21 CFR Part 11 signatures on every plan. You pay a
-          per-<strong>site-study</strong> rate that steps down as you grow — nothing else.</p>
         <p class="price-hero__note reveal">Billed annually · No per-seat fees · No setup surprises</p>
+        <div class="scroll-cue"><a href="#plans" aria-label="See plans"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a></div>
       </div>
     </section>
 
@@ -98,7 +104,7 @@
           <!-- Starter -->
           <div class="tier">
             <div class="tier__name">Starter</div>
-            <div class="tier__price">$2,500<span> / site-study</span></div>
+            <div class="tier__price">$2,500<span> / site-study*</span></div>
             <div class="tier__unit">site-studies 1–5 · billed yearly</div>
             <a href="index.html#contact" class="btn">Get a demo</a>
             <ul class="tier__list">
@@ -114,7 +120,7 @@
           <div class="tier tier--featured">
             <span class="tier__badge">Most popular</span>
             <div class="tier__name">Growth</div>
-            <div class="tier__price">$1,500<span> / site-study</span></div>
+            <div class="tier__price">$1,500<span> / site-study*</span></div>
             <div class="tier__unit">site-studies 6–20 · billed yearly</div>
             <a href="index.html#contact" class="btn">Get a demo</a>
             <ul class="tier__list">
@@ -128,7 +134,7 @@
           <!-- Scale -->
           <div class="tier">
             <div class="tier__name">Scale</div>
-            <div class="tier__price">$1,100<span> / site-study</span></div>
+            <div class="tier__price">$1,100<span> / site-study*</span></div>
             <div class="tier__unit">site-studies 21–50 · billed yearly</div>
             <a href="index.html#contact" class="btn">Get a demo</a>
             <ul class="tier__list">
@@ -154,38 +160,12 @@
           </div>
         </div>
 
-        <p class="section__lead reveal" style="text-align:center; max-width:760px; margin:2rem auto 0; font-size:1rem">
-          <strong>Rates are graduated.</strong> Each band applies only to the site-studies in it — your first 5 are
-          $2,500 each, the next 15 are $1,500 each, and so on. Adding a site always costs more, never less.
-        </p>
-      </div>
-    </section>
-
-    <!-- ===================== SITE-STUDY DEFINITION ===================== -->
-    <section class="section" id="unit">
-      <div class="container">
-        <div class="unit-def reveal">
-          <div>
-            <h2>What's a site-study?</h2>
-            <p>One site participating in one study. It's the unit that carries the compliance
-              work — training, signatures, and the documents an inspector asks for — so it's the
-              one thing we meter. People are always unlimited.</p>
-            <p>An additional study at a site you already run bills at ~60%, so shared sites stay
-              affordable as your portfolio grows.</p>
-          </div>
-          <div class="unit-def__eq" aria-hidden="true">
-            <span class="unit-def__chip">1 site</span>
-            <span class="unit-def__op">+</span>
-            <span class="unit-def__chip">1 study</span>
-            <span class="unit-def__op">=</span>
-            <span class="unit-def__chip is-unit">1 site-study</span>
-          </div>
-        </div>
+        <p class="reveal" style="text-align:center; margin:1.75rem auto 0; font-size:.85rem; color:var(--text-muted)">*&nbsp;Rates are graduated</p>
       </div>
     </section>
 
     <!-- ===================== BILLING MODEL ===================== -->
-    <section class="section section--alt">
+    <section class="section">
       <div class="container">
         <header class="section__head reveal">
           <p class="eyebrow">How billing works</p>
@@ -210,76 +190,6 @@
             <h4>Draft sites don't count</h4>
             <p>Planning a study? Sites stay in a draft state — free — until you finalize them. You're
               only billed for site-studies you actually commit to running.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== WORKED EXAMPLES ===================== -->
-    <section class="section">
-      <div class="container">
-        <header class="section__head reveal">
-          <p class="eyebrow">A few examples</p>
-          <h2 class="section__title">What it actually costs</h2>
-        </header>
-        <div class="examples reveal">
-          <div class="exrow">
-            <div class="exrow__calc"><b>5 site-studies</b> — one study, five sites</div>
-            <div class="exrow__units">≈ $2,500 / site</div>
-            <div class="exrow__tier">$12,500 / yr</div>
-          </div>
-          <div class="exrow">
-            <div class="exrow__calc"><b>15 site-studies</b></div>
-            <div class="exrow__units">≈ $1,833 / site</div>
-            <div class="exrow__tier">$27,500 / yr</div>
-          </div>
-          <div class="exrow">
-            <div class="exrow__calc"><b>40 site-studies</b></div>
-            <div class="exrow__units">≈ $1,425 / site</div>
-            <div class="exrow__tier">$57,000 / yr</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== FAQ ===================== -->
-    <section class="section section--alt">
-      <div class="container">
-        <header class="section__head reveal">
-          <p class="eyebrow">Pricing FAQ</p>
-          <h2 class="section__title">The fine print, in plain English</h2>
-        </header>
-        <div class="faq reveal">
-          <div class="faq__item">
-            <h4>Do more users cost more?</h4>
-            <p>Never. Users, trainees, and 21 CFR Part 11 signatures are unlimited. You're only ever
-              billed per site-study.</p>
-          </div>
-          <div class="faq__item">
-            <h4>How does the per-site rate drop as I grow?</h4>
-            <p>It's graduated by band — your first 5 site-studies are $2,500 each, the next 15 are
-              $1,500 each, and 21–50 are $1,100 each. Each band's rate applies only to the site-studies
-              in it.</p>
-          </div>
-          <div class="faq__item">
-            <h4>Can adding a site-study ever lower my bill?</h4>
-            <p>No. Because pricing is graduated, every additional site-study adds to your total — it
-              never reduces it.</p>
-          </div>
-          <div class="faq__item">
-            <h4>What happens if a site closes mid-year?</h4>
-            <p>Nothing changes on your bill. A site-study locks for the term the day you create it, so
-              your cost is predictable — there's no mid-term proration in either direction.</p>
-          </div>
-          <div class="faq__item">
-            <h4>I'm still planning a study. Am I billed for sites I haven't started?</h4>
-            <p>No. Sites stay in a free draft state until you finalize them. The meter only starts when
-              you commit a site-study to run.</p>
-          </div>
-          <div class="faq__item">
-            <h4>What if two studies share the same sites?</h4>
-            <p>An additional study at a site you already run bills at ~60% of a new site-study, so shared
-              sites stay affordable as you add protocols.</p>
           </div>
         </div>
       </div>
