@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
-  <link rel="stylesheet" href="assets/css/styles.css?v=2" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=3" />
 </head>
 <body>
   <!-- ===================== NAV ===================== -->
@@ -84,74 +84,496 @@
           </p>
           <div class="hero__cta">
             <a href="#contact" class="btn btn--lg">Get a demo</a>
-            <a href="#explorer" class="btn btn--ghost btn--lg">See the platform</a>
+            <a href="#loop" class="btn btn--ghost btn--lg">See the platform</a>
           </div>
           <p class="hero__note">Live in a day · 21 CFR Part 11 e-signatures built in</p>
         </div>
 
         <div class="hero__visual reveal">
-          <div class="mockup">
-            <div class="mockup__bar"><i></i><i></i><i></i><span>Deft — Training</span></div>
-            <div class="mockup__body">
-              <div class="ui-head">
-                <h5>Training matrix</h5>
-                <span class="ui-chip">Site 01 — Denver</span>
-                <span class="ui-chip ui-chip--ok ui-spacer">86% trained</span>
-              </div>
-              <div class="ui-table">
-                <div class="ui-row ui-row--head"><span>Team member</span><span>Curriculum</span><span>Due</span><span>Status</span></div>
-                <div class="ui-row ui-row--data">
-                  <span class="ui-cell-name"><span class="ui-ava ui-ava--b">AM</span><span><b>A. Mensah</b><small>Clinical Research Coord.</small></span></span>
-                  <span class="ui-cell">GCP Refresher</span>
-                  <span class="ui-due">Apr 2</span>
-                  <span><span class="pill pill--done">Completed</span></span>
-                </div>
-                <div class="ui-row ui-row--data">
-                  <span class="ui-cell-name"><span class="ui-ava ui-ava--t">RK</span><span><b>R. Kapoor</b><small>Site Investigator</small></span></span>
-                  <span class="ui-cell">Site Activation</span>
-                  <span class="ui-due">Jun 30</span>
-                  <span><span class="pill pill--pend">Pending</span></span>
-                </div>
-                <div class="ui-row ui-row--data">
-                  <span class="ui-cell-name"><span class="ui-ava ui-ava--v">JL</span><span><b>J. Liu</b><small>Study Nurse</small></span></span>
-                  <span class="ui-cell">Protocol NS-204</span>
-                  <span class="ui-due is-late">May 12</span>
-                  <span><span class="pill pill--late">Overdue</span></span>
-                </div>
-                <div class="ui-row ui-row--data">
-                  <span class="ui-cell-name"><span class="ui-ava ui-ava--g">SD</span><span><b>S. Daoud</b><small>Pharmacy Tech</small></span></span>
-                  <span class="ui-cell">IATA Shipping SOP</span>
-                  <span class="ui-due">Mar 19</span>
-                  <span><span class="pill pill--done">Completed</span></span>
+          <div class="hero__carousel" id="heroCarousel" aria-label="Product preview">
+            <!-- shot 1: training matrix -->
+            <div class="hero__slide is-active">
+              <div class="mockup">
+                <div class="mockup__bar"><i></i><i></i><i></i><span>Deft — Training matrix</span></div>
+                <div class="mockup__body">
+                  <div class="ui-head">
+                    <h5>Training matrix</h5>
+                    <span class="ui-chip">Site 01 — Denver</span>
+                    <span class="ui-chip ui-chip--ok ui-spacer">86% trained</span>
+                  </div>
+                  <div class="ui-table">
+                    <div class="ui-row ui-row--head"><span>Team member</span><span>Curriculum</span><span>Due</span><span>Status</span></div>
+                    <div class="ui-row ui-row--data">
+                      <span class="ui-cell-name"><span class="ui-ava ui-ava--b">AM</span><span><b>A. Mensah</b><small>Clinical Research Coord.</small></span></span>
+                      <span class="ui-cell">GCP Refresher</span>
+                      <span class="ui-due">Apr 2</span>
+                      <span><span class="pill pill--done">Completed</span></span>
+                    </div>
+                    <div class="ui-row ui-row--data">
+                      <span class="ui-cell-name"><span class="ui-ava ui-ava--t">RK</span><span><b>R. Kapoor</b><small>Site Investigator</small></span></span>
+                      <span class="ui-cell">Site Activation</span>
+                      <span class="ui-due">Jun 30</span>
+                      <span><span class="pill pill--pend">Pending</span></span>
+                    </div>
+                    <div class="ui-row ui-row--data">
+                      <span class="ui-cell-name"><span class="ui-ava ui-ava--v">JL</span><span><b>J. Liu</b><small>Study Nurse</small></span></span>
+                      <span class="ui-cell">Protocol NS-204</span>
+                      <span class="ui-due is-late">May 12</span>
+                      <span><span class="pill pill--late">Overdue</span></span>
+                    </div>
+                    <div class="ui-row ui-row--data">
+                      <span class="ui-cell-name"><span class="ui-ava ui-ava--g">SD</span><span><b>S. Daoud</b><small>Pharmacy Tech</small></span></span>
+                      <span class="ui-cell">IATA Shipping SOP</span>
+                      <span class="ui-due">Mar 19</span>
+                      <span><span class="pill pill--done">Completed</span></span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+
+            <!-- shot 2: readiness dashboard -->
+            <div class="hero__slide">
+              <div class="mockup">
+                <div class="mockup__bar"><i></i><i></i><i></i><span>Deft — Training readiness</span></div>
+                <div class="mockup__body">
+                  <div class="dash">
+                    <div class="dash__head">
+                      <div><h6>Site readiness</h6><small>PROTEUS-2 · GCP Refresher v1.4</small></div>
+                      <span class="dash__chip">Monitoring visit · Jul 8</span>
+                    </div>
+                    <div class="dash__top">
+                      <div class="dash__donut" style="--p:87%"><span>87%</span></div>
+                      <div class="dash__stats">
+                        <div class="dash__stat"><b>38</b><small>staff trained &amp; signed</small></div>
+                        <div class="dash__stat"><b>2</b><small>sites monitoring-ready</small></div>
+                        <div class="dash__stat warn"><b>1</b><small>site at risk before the visit</small></div>
+                      </div>
+                    </div>
+                    <div class="dash__bars">
+                      <div class="dbar"><span class="dbar__lab">SITE-001 · Denver</span><span class="dbar__track"><span class="dbar__fill" style="width:94%"></span></span><span class="dbar__val">94%</span><span class="dbar__status ok">Ready</span></div>
+                      <div class="dbar"><span class="dbar__lab">SITE-002 · Austin</span><span class="dbar__track"><span class="dbar__fill" style="width:88%"></span></span><span class="dbar__val">88%</span><span class="dbar__status ok">Ready</span></div>
+                      <div class="dbar warn"><span class="dbar__lab">SITE-003 · Boston</span><span class="dbar__track"><span class="dbar__fill" style="width:61%"></span></span><span class="dbar__val">61%</span><span class="dbar__status warn">At risk</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- shot 3: e-signature -->
+            <div class="hero__slide">
+              <div class="mockup">
+                <div class="mockup__bar"><i></i><i></i><i></i><span>Deft — Sign to complete</span></div>
+                <div class="mockup__body">
+                  <div class="ui-sign is-signed">
+                    <div class="ui-sign__head">
+                      <span class="ui-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
+                      <span><h5>Confirm your e-signature</h5><small>GCP Refresher · SOP-014 v4.0</small></span>
+                    </div>
+                    <div class="ui-field">
+                      <label>Meaning of signature</label>
+                      <div class="ui-select">I completed and understood this training</div>
+                    </div>
+                    <div class="ui-field">
+                      <label>Signature PIN</label>
+                      <div class="ui-pin"><i class="filled">•</i><i class="filled">•</i><i class="filled">•</i><i class="filled">•</i></div>
+                    </div>
+                    <span class="sg-act done">✓ Signed</span>
+                    <div class="ui-signed">
+                      <span class="ui-ava ui-ava--b">AM</span>
+                      <span><b>Amara Mensah</b><small>amara.mensah@deft.com · Jun 24, 2026 14:32 UTC · 10.2.4.8</small></span>
+                    </div>
+                    <p class="ui-stamp">Email-verified + PIN signed · 21 CFR Part 11 audit trail</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- shot 4: audit trail -->
+            <div class="hero__slide">
+              <div class="mockup">
+                <div class="mockup__bar"><i></i><i></i><i></i><span>Deft — Audit log</span></div>
+                <div class="mockup__body">
+                  <div class="ui-head">
+                    <h5>Audit trail</h5>
+                    <span class="ui-chip ui-chip--soft">CFR Part 11</span>
+                    <span class="ui-chip ui-chip--ok ui-spacer">Export CSV</span>
+                  </div>
+                  <div class="lg">
+                    <div class="lg-row lg-row--head"><span>Timestamp</span><span>User</span><span>Action</span><span>IP</span></div>
+                    <div class="lg-row">
+                      <span class="lg-ts">Jun 24 · 14:32</span>
+                      <span class="lg-user"><b>A. Mensah</b><small>Clinical Research Coord.</small></span>
+                      <span><span class="act act--ok">training_completed</span></span>
+                      <span class="lg-ip">10.2.4.8</span>
+                    </div>
+                    <div class="lg-row">
+                      <span class="lg-ts">Jun 24 · 14:32</span>
+                      <span class="lg-user"><b>A. Mensah</b><small>Clinical Research Coord.</small></span>
+                      <span><span class="act act--info">signature_applied</span></span>
+                      <span class="lg-ip">10.2.4.8</span>
+                    </div>
+                    <div class="lg-row">
+                      <span class="lg-ts">Jun 22 · 09:15</span>
+                      <span class="lg-user"><b>R. Okafor</b><small>Quality Lead</small></span>
+                      <span><span class="act act--info">document_published</span></span>
+                      <span class="lg-ip">10.2.4.2</span>
+                    </div>
+                    <div class="lg-row">
+                      <span class="lg-ts">Jun 20 · 16:40</span>
+                      <span class="lg-user"><b>R. Kapoor</b><small>Site Investigator</small></span>
+                      <span><span class="act act--mut">training_assigned</span></span>
+                      <span class="lg-ip">10.2.4.9</span>
+                    </div>
+                  </div>
+                  <div class="lg-foot"><span class="ok">✓</span> Sponsor QA package · <b>148 records</b> · all signatures verified</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero__dots" id="heroDots" role="tablist" aria-label="Choose preview">
+            <button class="hero__dot is-active" aria-label="Training matrix"></button>
+            <button class="hero__dot" aria-label="Readiness dashboard"></button>
+            <button class="hero__dot" aria-label="E-signature"></button>
+            <button class="hero__dot" aria-label="Audit trail"></button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== STAT STRIP ===================== -->
-    <section class="section section--alt">
+    <!-- ===================== PLATFORM WALKTHROUGH (self-playing loop) ===================== -->
+    <section class="section section--alt loop" id="loop">
       <div class="container">
-        <div class="stats reveal">
-          <div class="stat">
-            <div class="stat__num tnum" data-count="1" data-suffix=" day">1 day</div>
-            <div class="stat__label">to onboard a site</div>
+        <header class="loop__head reveal">
+          <p class="eyebrow">How it works</p>
+          <h2 class="section__title">One training loop, draft to inspection</h2>
+          <p class="section__lead">Author an SOP, assign it, sign it, and hand the sponsor a clean record — in one connected loop.</p>
+        </header>
+
+        <div class="loop__rail reveal" role="tablist" aria-label="Training loop steps">
+          <button class="loop__step is-active" data-step="0" role="tab" aria-selected="true">
+            <span class="n">1</span><span class="lab"><b>Create</b><small>choose source</small></span>
+          </button>
+          <button class="loop__step" data-step="1" role="tab" aria-selected="false">
+            <span class="n">2</span><span class="lab"><b>Draft &amp; sync</b><small>SOP editor</small></span>
+          </button>
+          <button class="loop__step" data-step="2" role="tab" aria-selected="false">
+            <span class="n">3</span><span class="lab"><b>Assign</b><small>sites &amp; roles</small></span>
+          </button>
+          <button class="loop__step" data-step="3" role="tab" aria-selected="false">
+            <span class="n">4</span><span class="lab"><b>E-sign</b><small>21 CFR Part 11</small></span>
+          </button>
+          <button class="loop__step" data-step="4" role="tab" aria-selected="false">
+            <span class="n">5</span><span class="lab"><b>Readiness</b><small>site completion</small></span>
+          </button>
+          <button class="loop__step" data-step="5" role="tab" aria-selected="false">
+            <span class="n">6</span><span class="lab"><b>Audit</b><small>trail &amp; export</small></span>
+          </button>
+        </div>
+        <div class="loop__track reveal"><div class="loop__fill" id="loopFill"></div></div>
+
+        <div class="loop__stage reveal" id="loopStage">
+          <!-- simulated cursor -->
+          <svg class="loop__cursor" id="loopCursor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 2.5 18.5 10l-5.7 1.6 3 6-2.6 1.2-3-6L5 17.5z" fill="#0E1726" stroke="#fff" stroke-width="1.1" stroke-linejoin="round"/>
+          </svg>
+
+          <!-- ===== SCENE 0 — CREATE / SOURCE ===== -->
+          <div class="scene is-active" data-scene="0">
+            <div class="mockup">
+              <div class="mockup__bar"><i></i><i></i><i></i><span>Deft — New training</span></div>
+              <div class="mockup__body">
+                <div class="src">
+                  <h6>New training · choose a source</h6>
+                  <p class="src__lead">Start from your own draft, pull a controlled SOP from your document system, or turn a file or recording into a course.</p>
+                  <div class="src__opts">
+                    <div class="src-card" data-src>
+                      <span class="src-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>
+                      <span class="src-card__main"><span class="src-card__t">Edit your own</span><span class="src-card__d">Author an SOP in the platform editor</span></span>
+                    </div>
+                    <div class="src-card" data-src data-pick>
+                      <span class="src-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></span>
+                      <span class="src-card__main"><span class="src-card__t">Sync from SharePoint / eTMF</span><span class="src-card__d">Pull a controlled document, version-linked</span><span class="src-sync" data-syncmsg>✓ Pulled SOP-014 · v1.4 — kept in sync</span></span>
+                    </div>
+                    <div class="src-card" data-src>
+                      <span class="src-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M17 8l-5-5-5 5"/><path d="M12 3v12"/></svg></span>
+                      <span class="src-card__main"><span class="src-card__t">Upload file, video or link</span><span class="src-card__d">PDF, MP4, or a recording URL</span></span>
+                    </div>
+                  </div>
+                  <span class="src__next" data-target>Continue</span>
+                </div>
+              </div>
+            </div>
+            <div class="loop__caption">
+              <p class="eyebrow">Step 1 · Create</p>
+              <h3>Start a training from anywhere</h3>
+              <p>Write it yourself, sync a controlled SOP straight from SharePoint or your eTMF, or drop in a file or recording. However it starts, it enters the same governed loop.</p>
+              <a class="tlink" href="#loop">See content sources →</a>
+            </div>
           </div>
-          <div class="stat">
-            <div class="stat__num is-accent">21 CFR<br>Part 11</div>
-            <div class="stat__label">e-signatures &amp; audit trail</div>
+
+          <!-- ===== SCENE 1 — EDITOR ===== -->
+          <div class="scene" data-scene="1">
+            <div class="mockup">
+              <div class="mockup__bar"><i></i><i></i><i></i><span>Deft — SOP-014 · Sample handling</span></div>
+              <div class="ed-bar">
+                <div class="ed-steps">
+                  <span class="ed-step cur"><b>Draft</b><small>editing</small></span>
+                  <span class="ed-step"><b>Pending approval</b><small>awaiting reviewer</small></span>
+                  <span class="ed-step"><b>Approved</b><small>ready to publish</small></span>
+                  <span class="ed-step"><b>Published</b><small>v—</small></span>
+                </div>
+                <span class="ed-save" id="edSave"><span class="s-ing">Saving…</span><span class="s-ed">✓ Saved just now</span></span>
+                <span class="ed-act" data-target>Submit for approval</span>
+              </div>
+              <div class="ed-grid">
+                <div class="ed-doc">
+                  <h6>Sample Handling &amp; Storage</h6>
+                  <div class="ed-meta">SOP-014 · Linked curriculum: GCP Refresher</div>
+                  <p>Biological samples must be processed within 30 minutes of collection. Centrifuge at 1,500 × g for 10 minutes at 4 °C, then aliquot into pre-labeled cryovials.</p>
+                  <p>Aliquots are <mark data-mark>stored at <span data-temp>−80 °C</span> within two hours of collection</mark> and logged in the sample manifest before transfer.</p>
+                </div>
+                <div class="ed-rail">
+                  <h6>Discussion <span class="c" data-disc>2</span></h6>
+                  <div class="ed-cmt" data-cmt>
+                    <div class="q">“…stored at −80 °C within two hours…”</div>
+                    <div class="who"><span class="ui-ava ui-ava--t">RO</span><span><b>R. Okafor</b><br><small>Quality Lead · 2h</small></span></div>
+                    <div class="txt">Should this match the kit manual (−70 °C)?</div>
+                    <div class="ed-cmt__act"><span class="ed-resolve" data-resolve>Accept &amp; resolve</span></div>
+                    <div class="ed-cmt__done">✓ Resolved · now −70 °C</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="loop__caption">
+              <p class="eyebrow">Step 2 · Draft &amp; sync</p>
+              <h3>Author SOPs right in the platform</h3>
+              <p>Write and revise SOPs in the editor — autosave, version control, inline review comments, and a Draft → Approved → Published trail, all built in.</p>
+              <a class="tlink" href="#loop">See document control →</a>
+            </div>
           </div>
-          <div class="stat">
-            <div class="stat__num tnum" data-count="2">2</div>
-            <div class="stat__label">products, one platform</div>
+
+          <!-- ===== SCENE 2 — ASSIGN ===== -->
+          <div class="scene" data-scene="2">
+            <div class="mockup">
+              <div class="mockup__bar"><i></i><i></i><i></i><span>Deft — Assign training</span></div>
+              <div class="mockup__body" style="padding:0">
+                <div class="asg">
+                  <div class="asg__form">
+                    <h6>Assign · GCP Refresher</h6>
+
+                    <div class="asg__field">
+                      <div class="asg__lab">Study</div>
+                      <div class="asg__dd" id="asgDD">
+                        <div class="asg__dd-cur" data-dd><span class="asg__dd-ph">Select a study…</span></div>
+                        <div class="asg__dd-menu">
+                          <div class="asg__dd-opt" data-study="PROTEUS-2"><b>PROTEUS-2</b> <small>Phase III · 6 sites</small></div>
+                          <div class="asg__dd-opt" data-study="HELIOS-1"><b>HELIOS-1</b> <small>Phase II · 3 sites</small></div>
+                          <div class="asg__dd-opt" data-study="ORION-4"><b>ORION-4</b> <small>Phase III · 9 sites</small></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="asg__field">
+                      <div class="asg__lab">Sites</div>
+                      <div class="asg__sites">
+                        <div class="site-card is-off" data-site><span class="chk">✓</span><span class="site-card__main"><span class="site-card__id">SITE-001 · Denver</span><span class="site-card__meta">PI: Okafor · 14 staff</span></span></div>
+                        <div class="site-card is-off" data-site><span class="chk">✓</span><span class="site-card__main"><span class="site-card__id">SITE-002 · Austin</span><span class="site-card__meta">PI: Reyes · 9 staff</span></span></div>
+                        <div class="site-card is-off" data-site><span class="chk">✓</span><span class="site-card__main"><span class="site-card__id">SITE-003 · Boston</span><span class="site-card__meta">PI: Nyong · 11 staff</span></span></div>
+                        <div class="site-card is-off"><span class="chk">✓</span><span class="site-card__main"><span class="site-card__id">SITE-004 · Seattle</span><span class="site-card__meta">PI: Park · 6 staff</span></span></div>
+                      </div>
+                    </div>
+
+                    <div class="asg__field">
+                      <div class="asg__lab">Roles</div>
+                      <div class="asg__roles">
+                        <span class="role-chip" data-role data-add="3">Investigator <small>INV</small></span>
+                        <span class="role-chip" data-role data-add="12">Clinical Research Coord. <small>CRC</small></span>
+                        <span class="role-chip" data-role data-add="18">Study Nurse <small>RN</small></span>
+                        <span class="role-chip">Pharmacy <small>PHM</small></span>
+                      </div>
+                    </div>
+
+                    <div class="asg__field">
+                      <div class="asg__lab">Due date</div>
+                      <div class="asg__due">
+                        <span class="due-opt" data-due>14 days</span>
+                        <span class="due-opt" data-due data-due-pick>30 days</span>
+                        <span class="due-opt" data-due>60 days</span>
+                        <span class="due-date" data-due-date>· complete by Jul 25, 2026</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="asg__people">
+                    <div class="asg__people-head">
+                      <span>Will be enrolled</span>
+                      <span class="asg__count" id="asgCount">0<small>people</small></span>
+                    </div>
+                    <div class="asg__list" id="asgList">
+                      <div class="asg__empty" data-empty>Pick a study, sites &amp; roles to resolve people.</div>
+                      <div class="asg__row" data-when="0"><span class="ui-ava ui-ava--b">AO</span><span class="asg__row-main"><b>Dr. Amara Okafor</b><small>Investigator · Denver</small></span></div>
+                      <div class="asg__row" data-when="1"><span class="ui-ava ui-ava--t">LR</span><span class="asg__row-main"><b>Lena Reyes</b><small>CRC · Austin</small></span></div>
+                      <div class="asg__row" data-when="1"><span class="ui-ava ui-ava--g">JP</span><span class="asg__row-main"><b>James Park</b><small>CRC · Boston</small></span></div>
+                      <div class="asg__row" data-when="2"><span class="ui-ava ui-ava--v">PS</span><span class="asg__row-main"><b>Priya Shah</b><small>Study Nurse · Denver</small></span></div>
+                      <div class="asg__row" data-when="2"><span class="ui-ava ui-ava--b">TB</span><span class="asg__row-main"><b>Tom Becker</b><small>Study Nurse · Austin</small></span></div>
+                      <div class="asg__more" data-more>+28 more matched by role</div>
+                      <div class="asg__row" data-oneoff><span class="ui-ava ui-ava--t">MG</span><span class="asg__row-main"><b>Maria Gomez</b><small>Independent Auditor</small></span><span class="asg__tag">added</span></div>
+                    </div>
+                    <div class="asg__add" data-addbtn>+ Add individual…</div>
+                  </div>
+
+                  <div class="asg__bar"><span class="asg__save" data-target>Save assignments</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="loop__caption">
+              <p class="eyebrow">Step 3 · Assign</p>
+              <h3>Assign by study, site and role — not by hand</h3>
+              <p>Pick a study, its sites, and the roles that apply. Deft resolves the exact people in real time, and you can drop in individuals as one-offs. Everyone who matches is enrolled automatically and stays in sync as your team changes.</p>
+              <a class="tlink" href="#loop">See the training matrix →</a>
+            </div>
           </div>
-          <div class="stat">
-            <div class="stat__num tnum" data-count="0">0</div>
-            <div class="stat__label">implementation projects</div>
+
+          <!-- ===== SCENE 3 — E-SIGN ===== -->
+          <div class="scene" data-scene="3">
+            <div class="mockup">
+              <div class="mockup__bar"><i></i><i></i><i></i><span>Deft — Sign to complete</span></div>
+              <div class="mockup__body">
+                <div class="ui-sign" id="signCard">
+                  <div class="ui-sign__head">
+                    <span class="ui-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
+                    <span><h5>Confirm your e-signature</h5><small>GCP Refresher · SOP-014 v4.0</small></span>
+                  </div>
+                  <div class="ui-field">
+                    <label>Meaning of signature</label>
+                    <div class="ui-select">I completed and understood this training</div>
+                  </div>
+                  <div class="ui-field">
+                    <label>Signature PIN</label>
+                    <div class="ui-pin"><i data-pin>·</i><i data-pin>·</i><i data-pin>·</i><i data-pin>·</i></div>
+                  </div>
+                  <span class="sg-act" data-target>Sign &amp; complete</span>
+                  <div class="ui-signed">
+                    <span class="ui-ava ui-ava--b">AM</span>
+                    <span><b>Amara Mensah</b><small>amara.mensah@deft.com · Jun 24, 2026 14:32 UTC · 10.2.4.8</small></span>
+                  </div>
+                  <p class="ui-stamp">Email-verified + PIN signed · 21 CFR Part 11 audit trail</p>
+                </div>
+              </div>
+            </div>
+            <div class="loop__caption">
+              <p class="eyebrow">Step 4 · E-sign</p>
+              <h3>21 CFR Part 11 signatures, built in</h3>
+              <p>Staff complete training and sign off with a compliant e-signature — email-verified, PIN-confirmed, and timestamped. The meaning of every signature is captured.</p>
+              <a class="tlink" href="#loop">See e-signatures →</a>
+            </div>
+          </div>
+
+          <!-- ===== SCENE 4 — READINESS DASHBOARD ===== -->
+          <div class="scene" data-scene="4">
+            <div class="mockup">
+              <div class="mockup__bar"><i></i><i></i><i></i><span>Deft — Training readiness</span></div>
+              <div class="mockup__body">
+                <div class="dash">
+                  <div class="dash__head">
+                    <div><h6>Site readiness</h6><small>PROTEUS-2 · GCP Refresher v1.4</small></div>
+                    <span class="dash__chip">Monitoring visit · Jul 8</span>
+                  </div>
+                  <div class="dash__top">
+                    <div class="dash__donut" id="dashDonut"><span data-donut>0%</span></div>
+                    <div class="dash__stats">
+                      <div class="dash__stat"><b data-stat="trained">0</b><small>staff trained &amp; signed</small></div>
+                      <div class="dash__stat"><b data-stat="sites">0</b><small>sites monitoring-ready</small></div>
+                      <div class="dash__stat warn"><b data-stat="risk">0</b><small>site at risk before the visit</small></div>
+                    </div>
+                  </div>
+                  <div class="dash__bars">
+                    <div class="dbar" data-dbar><span class="dbar__lab">SITE-001 · Denver</span><span class="dbar__track"><span class="dbar__fill" data-fill="94"></span></span><span class="dbar__val" data-pct>0%</span><span class="dbar__status ok">Ready</span></div>
+                    <div class="dbar" data-dbar><span class="dbar__lab">SITE-002 · Austin</span><span class="dbar__track"><span class="dbar__fill" data-fill="88"></span></span><span class="dbar__val" data-pct>0%</span><span class="dbar__status ok">Ready</span></div>
+                    <div class="dbar warn is-risk" data-dbar data-drill><span class="dbar__lab">SITE-003 · Boston</span><span class="dbar__track"><span class="dbar__fill" data-fill="61"></span></span><span class="dbar__val" data-pct>0%</span><span class="dbar__status warn">At risk</span></div>
+                  </div>
+
+                  <div class="drill" data-drill-panel>
+                    <div class="drill__head">
+                      <span class="drill__title">SITE-003 · Boston — <b>4 staff overdue</b></span>
+                      <span class="drill__hint">Click a site to drill in</span>
+                    </div>
+                    <div class="drill__table">
+                      <div class="drill__row drill__row--head"><span>Person</span><span>Overdue training</span><span>Late</span><span></span></div>
+                      <div class="drill__row" data-late><span class="drill__who"><span class="ui-ava ui-ava--v">SL</span><span><b>Sarah Lindqvist</b><small>Study Nurse</small></span></span><span class="drill__trn">GCP Refresher v1.4</span><span class="drill__late">12d</span><span class="remind" data-remind>Remind</span></div>
+                      <div class="drill__row" data-late><span class="drill__who"><span class="ui-ava ui-ava--b">MW</span><span><b>Marcus Webb</b><small>Clinical Research Coord.</small></span></span><span class="drill__trn">GCP Refresher v1.4</span><span class="drill__late">9d</span><span class="remind" data-remind>Remind</span></div>
+                      <div class="drill__row" data-late><span class="drill__who"><span class="ui-ava ui-ava--t">PN</span><span><b>Dr. Priya Nair</b><small>Sub-Investigator</small></span></span><span class="drill__trn">GCP Refresher v1.4</span><span class="drill__late">5d</span><span class="remind" data-remind>Remind</span></div>
+                      <div class="drill__row" data-late><span class="drill__who"><span class="ui-ava ui-ava--g">TF</span><span><b>Tomás Ferreira</b><small>Study Nurse</small></span></span><span class="drill__trn">GCP Refresher v1.4</span><span class="drill__late">3d</span><span class="remind" data-remind>Remind</span></div>
+                    </div>
+                    <div class="drill__foot">
+                      <span class="drill__act drill__act--ghost" data-remind-all>Send reminder to all 4</span>
+                      <span class="drill__act drill__act--primary" data-target>Generate site visit report</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="loop__caption">
+              <p class="eyebrow">Step 5 · Readiness</p>
+              <h3>Know you're inspection-ready, site by site</h3>
+              <p>A live read on completion across every site, so you spot the gap before the sponsor's monitor does. Drill in, nudge the stragglers, and generate the visit pack in a click.</p>
+              <a class="tlink" href="#loop">See reporting →</a>
+            </div>
+          </div>
+
+          <!-- ===== SCENE 5 — AUDIT TRAIL ===== -->
+          <div class="scene" data-scene="5">
+            <div class="mockup">
+              <div class="mockup__bar"><i></i><i></i><i></i><span>Deft — Audit log</span></div>
+              <div class="mockup__body">
+                <div class="ui-head">
+                  <h5>Audit trail</h5>
+                  <span class="ui-chip ui-chip--soft">CFR Part 11</span>
+                  <span class="ui-chip ui-chip--ok ui-spacer lg-export" data-target>Export CSV</span>
+                </div>
+                <div class="lg">
+                  <div class="lg-row lg-row--head"><span>Timestamp</span><span>User</span><span>Action</span><span>IP</span></div>
+                  <div class="lg-row" data-row>
+                    <span class="lg-ts">Jun 24 · 14:32</span>
+                    <span class="lg-user"><b>A. Mensah</b><small>Clinical Research Coord.</small></span>
+                    <span><span class="act act--ok">training_completed</span></span>
+                    <span class="lg-ip">10.2.4.8</span>
+                  </div>
+                  <div class="lg-row" data-row>
+                    <span class="lg-ts">Jun 24 · 14:32</span>
+                    <span class="lg-user"><b>A. Mensah</b><small>Clinical Research Coord.</small></span>
+                    <span><span class="act act--info">signature_applied</span></span>
+                    <span class="lg-ip">10.2.4.8</span>
+                  </div>
+                  <div class="lg-row" data-row>
+                    <span class="lg-ts">Jun 22 · 09:15</span>
+                    <span class="lg-user"><b>R. Okafor</b><small>Quality Lead</small></span>
+                    <span><span class="act act--info">document_published</span></span>
+                    <span class="lg-ip">10.2.4.2</span>
+                  </div>
+                  <div class="lg-row" data-row>
+                    <span class="lg-ts">Jun 20 · 16:40</span>
+                    <span class="lg-user"><b>R. Kapoor</b><small>Site Investigator</small></span>
+                    <span><span class="act act--mut">training_assigned</span></span>
+                    <span class="lg-ip">10.2.4.9</span>
+                  </div>
+                </div>
+                <div class="lg-foot"><span class="ok">✓</span> Sponsor QA package · <b>148 records</b> · all signatures verified
+                  <span class="lg-toast" id="lgToast">Exported ✓</span>
+                </div>
+              </div>
+            </div>
+            <div class="loop__caption">
+              <p class="eyebrow">Step 6 · Audit</p>
+              <h3>Every action, on the record</h3>
+              <p>Behind the dashboard sits the proof: every draft, assignment, and signature logged automatically. Export a clean CFR Part 11 trail — or the full QA package — for the sponsor in one click.</p>
+              <a class="tlink" href="#loop">See audit &amp; reporting →</a>
+            </div>
           </div>
         </div>
+
+        <p class="loop__loopback reveal">↻ Revise the SOP and the loop restarts — <b>affected staff are auto-assigned the new version</b>, so training never drifts out of date.</p>
       </div>
     </section>
 
@@ -711,6 +1133,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=2" defer></script>
+  <script src="assets/js/main.js?v=3" defer></script>
 </body>
 </html>
