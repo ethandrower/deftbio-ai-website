@@ -257,7 +257,17 @@
     fill.style.width = ((i + 1) / N * 100) + '%';
   }
   function activePanel() { return scenes[idx]; }
-  function setHeight() { stage.style.height = activePanel().offsetHeight + 'px'; }
+  // The scene is position:absolute/inset:0, so its own offsetHeight is bounded to
+  // the stage (circular) and can't drive growth. Measure the natural height of its
+  // content columns instead, so the stage grows to fit taller screens (e.g. Assign)
+  // and the mockup never overflows upward into the step rail.
+  function setHeight() {
+    var p = activePanel();
+    var mock = p.querySelector('.mockup');
+    var cap = p.querySelector('.loop__caption');
+    var h = Math.max(mock ? mock.offsetHeight : 0, cap ? cap.offsetHeight : 0);
+    stage.style.height = h + 'px';
+  }
 
   // place cursor over the center of a selector (or element) inside the active scene
   function cursorTo(sel, instant) {
