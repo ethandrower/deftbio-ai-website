@@ -14,11 +14,11 @@
   </script>
 
   <title>Pricing — Deft</title>
-  <meta name="description" content="Transparent per-site-study pricing for Deft. Unlimited users, trainees, and 21 CFR Part 11 signatures on every plan — pay only for the compliance scope you run." />
+  <meta name="description" content="One plan for Deft: $5,000 a year including 3 site-studies, then a graduated per-site-study rate. Unlimited users, trainees and 21 CFR Part 11 signatures." />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Pricing — Deft" />
-  <meta property="og:description" content="Priced for your protocols, not your headcount. Unlimited people; pay a per-site-study rate that steps down as you grow." />
+  <meta property="og:description" content="Priced for your protocols, not your headcount. One plan: $5,000 a year including 3 site-studies, then a rate that steps down as you grow." />
   <meta property="og:image" content="assets/og-image.png" />
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
-  <link rel="stylesheet" href="assets/css/styles.css?v=2" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=3" />
   <style>
     .scroll-cue { display: flex; justify-content: center; margin-top: 2.75rem; }
     .scroll-cue a { color: var(--text-muted); animation: cue-bounce 1.8s ease-in-out infinite; }
@@ -100,76 +100,52 @@
       </div>
     </section>
 
-    <!-- ===================== TIER CARDS (per-site rate) ===================== -->
+    <!-- ===================== PLAN ===================== -->
     <section class="section section--alt" id="plans" style="padding-top: clamp(40px,5vw,64px)">
       <div class="container">
         <header class="section__head reveal">
-          <p class="eyebrow">Plans</p>
-          <h2 class="section__title">A per-site-study rate that steps down as you grow</h2>
-          <p class="section__lead">Same product at every size — bigger portfolios just pay a lower rate per site-study.</p>
+          <p class="eyebrow">Plan</p>
+          <h2 class="section__title">One plan, priced by site-study</h2>
+          <p class="section__lead">Every feature at every size. Each additional site-study is billed at the rate for its range, so the rate steps down as you grow.</p>
         </header>
 
-        <div class="ptiers reveal">
-          <!-- Starter -->
-          <div class="tier">
-            <div class="tier__name">Starter</div>
-            <div class="tier__price">$2,500<span> / site-study*</span></div>
-            <div class="tier__unit">site-studies 1–5 · billed yearly</div>
+        <div class="plan reveal">
+          <div class="plan__main">
+            <div class="plan__name">Deft</div>
+            <div class="plan__price">$5,000<span> / year</span></div>
+            <div class="plan__unit">Includes 3 site-studies</div>
+
+            <p class="plan__h">Additional site-studies</p>
+            <table class="rates" id="rates">
+              <tr data-from="4" data-to="10"><td>Sites 4–10</td><td>$1,500 each</td></tr>
+              <tr data-from="11" data-to="20"><td>Sites 11–20</td><td>$1,200 each</td></tr>
+              <tr data-from="21" data-to="50"><td>Sites 21–50</td><td>$1,000 each</td></tr>
+              <tr data-from="51" data-to="999"><td>51+</td><td>Volume pricing</td></tr>
+            </table>
+
+            <div class="pcalc">
+              <label class="pcalc__row" for="sites"><span>Site-studies</span><b id="sitesOut">8</b></label>
+              <input type="range" id="sites" min="1" max="51" value="8" />
+              <div class="pcalc__total"><span>Annual total</span><b id="total">$12,500</b></div>
+              <div class="pcalc__per" id="per">$1,563 per site-study</div>
+            </div>
+
             <a href="index.html#contact" class="btn">Get a demo</a>
-            <ul class="tier__list">
+          </div>
+
+          <div class="plan__side">
+            <p class="plan__h" style="margin-top:0">Everything included</p>
+            <ul class="plan__list">
               <li>Unlimited users, trainees &amp; Part 11 signatures</li>
               <li>Unlimited studies</li>
-              <li>Standard validation pack (IQ/OQ/PQ)</li>
-              <li>Email support</li>
-              <li>2-week implementation</li>
-            </ul>
-          </div>
-
-          <!-- Growth (featured) -->
-          <div class="tier tier--featured">
-            <span class="tier__badge">Most popular</span>
-            <div class="tier__name">Growth</div>
-            <div class="tier__price">$1,500<span> / site-study*</span></div>
-            <div class="tier__unit">site-studies 6–20 · billed yearly</div>
-            <a href="index.html#contact" class="btn">Get a demo</a>
-            <ul class="tier__list">
-              <li>Everything in Starter</li>
-              <li>Standard validation pack (IQ/OQ/PQ)</li>
+              <li>Clinical Training Management and Trial Master File</li>
+              <li>Full validation pack (IQ/OQ/PQ)</li>
               <li>Priority support</li>
               <li>2-week implementation</li>
-            </ul>
-          </div>
-
-          <!-- Scale -->
-          <div class="tier">
-            <div class="tier__name">Scale</div>
-            <div class="tier__price">$1,100<span> / site-study*</span></div>
-            <div class="tier__unit">site-studies 21–50 · billed yearly</div>
-            <a href="index.html#contact" class="btn">Get a demo</a>
-            <ul class="tier__list">
-              <li>Everything in Growth</li>
-              <li>Full validation pack (IQ/OQ/PQ)</li>
-              <li>Dedicated customer success manager</li>
-              <li>3–4-week implementation</li>
-            </ul>
-          </div>
-
-          <!-- Enterprise -->
-          <div class="tier">
-            <div class="tier__name">Enterprise</div>
-            <div class="tier__price">Custom</div>
-            <div class="tier__unit">51+ site-studies · volume pricing</div>
-            <a href="index.html#contact" class="btn btn--ghost">Talk to sales</a>
-            <ul class="tier__list">
-              <li>Everything in Scale</li>
-              <li>Full validation pack (IQ/OQ/PQ)</li>
-              <li>Dedicated customer success manager</li>
-              <li>Custom implementation</li>
+              <li>Dedicated customer success manager from 21 site-studies</li>
             </ul>
           </div>
         </div>
-
-        <p class="reveal" style="text-align:center; margin:1.75rem auto 0; font-size:.85rem; color:var(--text-muted)">*&nbsp;Rates are graduated</p>
       </div>
     </section>
 
@@ -271,5 +247,37 @@
   </footer>
 
   <script src="assets/js/main.js?v=2" defer></script>
+  <script>
+    (function () {
+      var PLATFORM = 5000, INCLUDED = 3;
+      var BANDS = [[4, 10, 1500], [11, 20, 1200], [21, 50, 1000]];
+      var input = document.getElementById('sites');
+      var fmt = function (n) { return '$' + Math.round(n).toLocaleString('en-US'); };
+
+      function total(n) {
+        var t = PLATFORM;
+        BANDS.forEach(function (b) {
+          var count = Math.min(n, b[1]) - b[0] + 1;
+          if (count > 0) t += count * b[2];
+        });
+        return t;
+      }
+
+      function render() {
+        var n = +input.value;
+        document.getElementById('sitesOut').textContent = n > 50 ? '51+' : n;
+        document.getElementById('total').textContent = n > 50 ? 'Contact us' : fmt(total(n));
+        document.getElementById('per').textContent = n > 50 ? 'Volume pricing'
+          : n <= INCLUDED ? 'Up to 3 site-studies included'
+          : fmt(total(n) / n) + ' per site-study';
+        document.querySelectorAll('#rates tr').forEach(function (tr) {
+          tr.classList.toggle('on', n >= +tr.dataset.from);
+        });
+      }
+
+      input.addEventListener('input', render);
+      render();
+    })();
+  </script>
 </body>
 </html>
