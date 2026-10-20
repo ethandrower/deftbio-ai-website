@@ -66,7 +66,7 @@
       n = Math.max(1, Math.floor(n || 1));
       if (n > MAXB) {
         calcTotal.innerHTML = 'Custom';
-        if (calcEff) calcEff.textContent = '50+ site-studies — volume pricing';
+        if (calcEff) calcEff.textContent = '50+ site-studies: volume pricing';
         return;
       }
       var c = ssCost(n);
@@ -165,7 +165,7 @@
 
     var key = form.elements['access_key'] ? form.elements['access_key'].value : '';
     if (!key || key === 'YOUR_WEB3FORMS_ACCESS_KEY') {
-      setStatus('Form not configured yet — add your Web3Forms access key in index.html.', 'is-err');
+      setStatus('Form not configured yet. Add your Web3Forms access key in index.html.', 'is-err');
       return;
     }
 
@@ -182,7 +182,7 @@
       if (res.ok && data.success) {
         form.reset();
         Object.keys(validators).forEach(function (n) { setError(n, ''); });
-        setStatus('Thanks! Your request is in — we’ll be in touch within one business day.', 'is-ok');
+        setStatus('Thanks! Your request is in. We’ll be in touch within one business day.', 'is-ok');
       } else {
         setStatus((data && data.message) || 'Something went wrong. Please try again or email us directly.', 'is-err');
       }
